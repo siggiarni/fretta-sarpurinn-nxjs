@@ -12,7 +12,7 @@ export const feeds: Feed[] = [
   { name: "DV", url: "https://www.dv.is/feed/", color: "#b70f15" },
   { name: "Heimildin", url: "https://heimildin.is/rss/", color: "#c2410c" },
   { name: "Viðskiptablaðið", url: "https://vb.is/rss/", color: "#006aa5" },
-  { name: "akureyri.net", url: "https://www.akureyri.net/feed/", color: "#be185d" },
+  { name: "akureyri.net", url: "https://www.akureyri.net/feed/", color: "#dd0010" },
   { name: "Feykir", url: "https://www.feykir.is/feed/", color: "#92400e" },
   { name: "Bændablaðið", url: "https://www.bbl.is/rss/", color: "#4d7c0f" },
   { name: "Grapevine", url: "https://grapevine.is/feed/", color: "#334155" },
