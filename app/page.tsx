@@ -29,14 +29,16 @@ export default async function Home() {
                 {article.title}
               </a>
               <div className="meta">
-                {article.source}
+                <span
+                  className="badge"
+                  style={{ "--badge-color": article.color } as React.CSSProperties}
+                >
+                  {article.source}
+                </span>
                 {article.date && (
-                  <>
-                    {" · "}
-                    <time dateTime={article.date}>
-                      {dateFormat.format(new Date(article.date))}
-                    </time>
-                  </>
+                  <time dateTime={article.date}>
+                    {dateFormat.format(new Date(article.date))}
+                  </time>
                 )}
               </div>
             </li>

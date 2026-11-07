@@ -6,6 +6,7 @@ export type Article = {
   title: string;
   link: string;
   source: string;
+  color: string;
   date: string | null;
 };
 
@@ -27,6 +28,7 @@ async function fetchFeed(feed: Feed): Promise<Article[]> {
       title: item.title?.trim() || item.link!,
       link: item.link!,
       source: feed.name,
+      color: feed.color,
       date: item.isoDate ?? null,
     }));
 }
