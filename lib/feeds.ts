@@ -6,7 +6,7 @@ export type Feed = {
 };
 
 export const feeds: Feed[] = [
-  { name: "RÚV", url: "https://www.ruv.is/rss/frettir", color: "#b3261e" },
+  { name: "RÚV", url: "https://www.ruv.is/rss/frettir", color: "#0073a0" },
   { name: "mbl.is", url: "https://www.mbl.is/feeds/fp/", color: "#00005f" },
   { name: "Vísir", url: "https://www.visir.is/rss/allt", color: "#2f5396" },
   { name: "DV", url: "https://www.dv.is/feed/", color: "#b70f15" },
