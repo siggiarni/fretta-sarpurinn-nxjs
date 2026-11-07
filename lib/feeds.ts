@@ -17,4 +17,5 @@ export const feeds: Feed[] = [
   { name: "Bændablaðið", url: "https://www.bbl.is/rss/", color: "#4d7c0f" },
   { name: "Grapevine", url: "https://grapevine.is/feed/", color: "#334155" },
   { name: "FÍB", url: "https://fibfrettir.is/feed/", color: "#4338ca" },
+  { name: "Veðurstofan", url: "https://www.vedur.is/um-vi/frettir/rss.xml", color: "#0369a1" },
 ];
