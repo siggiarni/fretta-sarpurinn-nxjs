@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Fréttasarpurinn",
-  description: "Nýjustu fréttir frá RÚV, mbl.is og Vísi",
+  description: "Nýjustu fréttir frá íslenskum fréttamiðlum",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

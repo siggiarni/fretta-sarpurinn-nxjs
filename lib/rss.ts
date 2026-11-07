@@ -12,6 +12,8 @@ export type Article = {
 
 const REVALIDATE_SECONDS = 600;
 const MAX_ARTICLES = 50;
+/** Keep busy feeds (e.g. Viðskiptablaðið, ~150 items) from crowding out the rest. */
+const MAX_PER_FEED = 15;
 
 const parser = new Parser();
 
@@ -30,7 +32,9 @@ async function fetchFeed(feed: Feed): Promise<Article[]> {
       source: feed.name,
       color: feed.color,
       date: item.isoDate ?? null,
-    }));
+    }))
+    .sort((a, b) => (b.date ?? "").localeCompare(a.date ?? ""))
+    .slice(0, MAX_PER_FEED);
 }
 
 export async function getArticles(): Promise<{ articles: Article[]; failed: string[] }> {
