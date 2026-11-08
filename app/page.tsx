@@ -38,12 +38,7 @@ export default async function Home() {
           <ul className="feeds">
             {articles.map((article) => (
               <li key={article.link} className="item">
-                <span
-                  className="badge"
-                  style={{ "--badge-bg-color": article.color } as React.CSSProperties}
-                >
-                  {article.source}
-                </span>
+                <span className={`badge ${article.slug}`}>{article.source}</span>
                 <h2 className="item__headline">
                   <a
                     className="item__link"

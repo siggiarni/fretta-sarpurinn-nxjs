@@ -84,7 +84,11 @@ body {
   font-weight: 400;
 }
 
-/* Source badge; color comes from --badge-bg-color set per article. */
+/*
+ * Source badge. Each badge gets its feed's slug as a class (see lib/feeds.ts);
+ * set --badge-bg-color (background) and optionally --badge-color (text, white
+ * by default) per source below. A source with no rule gets a grey badge.
+ */
 
 .badge {
   margin-block: 0.15em;
@@ -104,6 +108,19 @@ body {
     font-size: 0.9em;
   }
 }
+
+.badge.ruv          { --badge-bg-color: #0073a0; }
+.badge.mbl          { --badge-bg-color: #00005f; }
+.badge.visir        { --badge-bg-color: #2f5396; }
+.badge.dv           { --badge-bg-color: #b70f15; }
+.badge.heimildin    { --badge-bg-color: #181a1b; }
+.badge.vb           { --badge-bg-color: #006aa5; }
+.badge.akureyri     { --badge-bg-color: #dd0010; }
+.badge.feykir       { --badge-bg-color: #92400e; }
+.badge.baendabladid { --badge-bg-color: #4d7c0f; }
+.badge.grapevine    { --badge-bg-color: #334155; }
+.badge.fibfrettir   { --badge-bg-color: #4338ca; }
+.badge.vedur        { --badge-bg-color: #0369a1; }
 
 /* Errors */
 

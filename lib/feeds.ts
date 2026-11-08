@@ -1,21 +1,24 @@
 export type Feed = {
   name: string;
   url: string;
-  /** Badge background color; text is white, so keep it dark enough for contrast. */
-  color: string;
+  /**
+   * CSS class added to the source badge (e.g. `badge ruv`).
+   * Badge colors are set per slug in app/globals.css.
+   */
+  slug: string;
 };
 
 export const feeds: Feed[] = [
-  { name: "RÚV", url: "https://www.ruv.is/rss/frettir", color: "#0073a0" },
-  { name: "mbl.is", url: "https://www.mbl.is/feeds/fp/", color: "#00005f" },
-  { name: "Vísir", url: "https://www.visir.is/rss/allt", color: "#2f5396" },
-  { name: "DV", url: "https://www.dv.is/feed/", color: "#b70f15" },
-  { name: "Heimildin", url: "https://heimildin.is/rss/", color: "#181a1b" },
-  { name: "Viðskiptablaðið", url: "https://vb.is/rss/", color: "#006aa5" },
-  { name: "akureyri.net", url: "https://www.akureyri.net/feed/", color: "#dd0010" },
-  { name: "Feykir", url: "https://www.feykir.is/feed/", color: "#92400e" },
-  { name: "Bændablaðið", url: "https://www.bbl.is/rss/", color: "#4d7c0f" },
-  { name: "Grapevine", url: "https://grapevine.is/feed/", color: "#334155" },
-  { name: "FÍB", url: "https://fibfrettir.is/feed/", color: "#4338ca" },
-  { name: "Veðurstofan", url: "https://www.vedur.is/um-vi/frettir/rss.xml", color: "#0369a1" },
+  { name: "RÚV", url: "https://www.ruv.is/rss/frettir", slug: "ruv" },
+  { name: "mbl.is", url: "https://www.mbl.is/feeds/fp/", slug: "mbl" },
+  { name: "Vísir", url: "https://www.visir.is/rss/allt", slug: "visir" },
+  { name: "DV", url: "https://www.dv.is/feed/", slug: "dv" },
+  { name: "Heimildin", url: "https://heimildin.is/rss/", slug: "heimildin" },
+  { name: "Viðskiptablaðið", url: "https://vb.is/rss/", slug: "vb" },
+  { name: "akureyri.net", url: "https://www.akureyri.net/feed/", slug: "akureyri" },
+  { name: "Feykir", url: "https://www.feykir.is/feed/", slug: "feykir" },
+  { name: "Bændablaðið", url: "https://www.bbl.is/rss/", slug: "baendabladid" },
+  { name: "Grapevine", url: "https://grapevine.is/feed/", slug: "grapevine" },
+  { name: "FÍB", url: "https://fibfrettir.is/feed/", slug: "fibfrettir" },
+  { name: "Veðurstofan", url: "https://www.vedur.is/um-vi/frettir/rss.xml", slug: "vedur" },
 ];

@@ -6,7 +6,7 @@ export type Article = {
   title: string;
   link: string;
   source: string;
-  color: string;
+  slug: string;
   date: string | null;
 };
 
@@ -30,7 +30,7 @@ async function fetchFeed(feed: Feed): Promise<Article[]> {
       title: item.title?.trim() || item.link!,
       link: item.link!,
       source: feed.name,
-      color: feed.color,
+      slug: feed.slug,
       date: item.isoDate ?? null,
     }))
     .sort((a, b) => (b.date ?? "").localeCompare(a.date ?? ""))
