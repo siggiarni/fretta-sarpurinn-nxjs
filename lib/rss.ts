@@ -12,12 +12,12 @@ export type Article = {
 
 const REVALIDATE_SECONDS = 600;
 const MAX_ARTICLES = 50;
-/** Keep busy feeds (e.g. Viðskiptablaðið, ~150 items) from crowding out the rest. */
+/** Keep busy feeds from crowding out the rest. */
 const MAX_PER_FEED = 15;
 
 /**
  * Identify the app to feed servers instead of sending Node's generic default,
- * which bot filters (e.g. Cloudflare in front of vb.is) tend to block.
+ * which bot filters tend to block.
  */
 const USER_AGENT =
   "FrettaSarpurinn/1.0 (+https://github.com/siggiarni/fretta-sarpurinn-nxjs)";
