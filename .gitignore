@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# track the npm lockfile even though the global gitignore excludes it
+!package-lock.json
