@@ -15,10 +15,22 @@ const MAX_ARTICLES = 50;
 /** Keep busy feeds (e.g. Viðskiptablaðið, ~150 items) from crowding out the rest. */
 const MAX_PER_FEED = 15;
 
+/**
+ * Identify the app to feed servers instead of sending Node's generic default,
+ * which bot filters (e.g. Cloudflare in front of vb.is) tend to block.
+ */
+const USER_AGENT =
+  "FrettaSarpurinn/1.0 (+https://github.com/siggiarni/fretta-sarpurinn-nxjs)";
+
 const parser = new Parser();
 
 async function fetchFeed(feed: Feed): Promise<Article[]> {
-  const res = await fetch(feed.url);
+  const res = await fetch(feed.url, {
+    headers: {
+      "User-Agent": USER_AGENT,
+      Accept: "application/rss+xml, application/atom+xml, application/xml;q=0.9, */*;q=0.8",
+    },
+  });
   if (!res.ok) {
     throw new Error(`${feed.name}: HTTP ${res.status}`);
   }
