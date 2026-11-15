@@ -22,11 +22,17 @@ body {
 .header__title {
   margin-block-end: 1rem;
   padding-block-end: 1rem;
-  font-size: clamp(1rem, 8vw, 2.5rem);
-  font-weight: 400;
+  font-size: clamp(1rem, 8vw, 1.8rem);
+  font-weight: 600;
   color: light-dark(black, white);
   text-align: center;
   border-bottom: thin solid lightgray;
+}
+
+.header__icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-inline-end: 0.25em;
 }
 
 /* Article list */

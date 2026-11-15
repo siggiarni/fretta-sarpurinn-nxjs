@@ -13,7 +13,9 @@ const dateParts = new Intl.DateTimeFormat("en-GB", {
 /** Formats as "dd.MM.yyyy HH:mm" in Icelandic time. */
 function formatDate(iso: string): string {
   const p = Object.fromEntries(
-    dateParts.formatToParts(new Date(iso)).map(({ type, value }) => [type, value]),
+    dateParts
+      .formatToParts(new Date(iso))
+      .map(({ type, value }) => [type, value]),
   );
   return `${p.day}.${p.month}.${p.year} ${p.hour}:${p.minute}`;
 }
@@ -24,7 +26,10 @@ export default async function Home() {
   return (
     <>
       <header className="header">
-        <h1 className="header__title">📰 Frétta sarpur&shy;inn</h1>
+        <h1 className="header__title">
+          <img className="header__icon" src="/icon.svg" alt="" />
+          Frétta sarpur&shy;inn
+        </h1>
       </header>
 
       <main className="main">
@@ -38,7 +43,9 @@ export default async function Home() {
           <ul className="feeds">
             {articles.map((article) => (
               <li key={article.link} className="item">
-                <span className={`badge ${article.slug}`}>{article.source}</span>
+                <span className={`badge ${article.slug}`}>
+                  {article.source}
+                </span>
                 <h2 className="item__headline">
                   <a
                     className="item__link"
