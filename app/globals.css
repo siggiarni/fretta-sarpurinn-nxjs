@@ -147,6 +147,9 @@ body {
 .badge.vedur {
   --badge-bg-color: #0369a1;
 }
+.badge.mannlif {
+  --badge-bg-color: #6b21a8;
+}
 
 /* Errors */
 
