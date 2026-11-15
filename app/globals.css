@@ -19,7 +19,7 @@ body {
 /* Header */
 
 .header__title {
-  margin-block-end: 2rem;
+  margin-block-end: 1rem;
   padding-block-end: 1rem;
   font-size: clamp(1rem, 8vw, 2.5rem);
   font-weight: 400;
@@ -39,7 +39,8 @@ body {
 }
 
 .item {
-  padding: 0.5em;
+  padding: 1rem;
+  border-radius: 0.75rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -70,7 +71,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  font-size: 1.05em;
+  font-size: 1em;
   text-wrap: balance;
 }
 
@@ -100,26 +101,50 @@ body {
   border-radius: 0.25rem;
   font-size: 0.8em;
   white-space: nowrap;
+  line-height: var(--badge-lineheight, 1rem);
 }
 
 @media screen and (min-width: 600px) {
   .badge {
+    --badge-lineheight: 1.75rem;
     margin-inline-end: 1rem;
     font-size: 0.9em;
   }
 }
 
-.badge.ruv          { --badge-bg-color: #0073a0; }
-.badge.mbl          { --badge-bg-color: #00005f; }
-.badge.visir        { --badge-bg-color: #2f5396; }
-.badge.dv           { --badge-bg-color: #b70f15; }
-.badge.heimildin    { --badge-bg-color: #181a1b; }
-.badge.akureyri     { --badge-bg-color: #dd0010; }
-.badge.feykir       { --badge-bg-color: #225412; }
-.badge.baendabladid { --badge-bg-color: #4d7c0f; }
-.badge.grapevine    { --badge-bg-color: #334155; }
-.badge.fibfrettir   { --badge-bg-color: #4338ca; }
-.badge.vedur        { --badge-bg-color: #0369a1; }
+.badge.ruv {
+  --badge-bg-color: #0073a0;
+}
+.badge.mbl {
+  --badge-bg-color: #00005f;
+}
+.badge.visir {
+  --badge-bg-color: #2f5396;
+}
+.badge.dv {
+  --badge-bg-color: #b70f15;
+}
+.badge.heimildin {
+  --badge-bg-color: #181a1b;
+}
+.badge.akureyri {
+  --badge-bg-color: #dd0010;
+}
+.badge.feykir {
+  --badge-bg-color: #225412;
+}
+.badge.baendabladid {
+  --badge-bg-color: #4d7c0f;
+}
+.badge.grapevine {
+  --badge-bg-color: #334155;
+}
+.badge.fibfrettir {
+  --badge-bg-color: #4338ca;
+}
+.badge.vedur {
+  --badge-bg-color: #0369a1;
+}
 
 /* Errors */
 
