@@ -14,6 +14,7 @@ body {
   font-family: system-ui, sans-serif;
   font-size: 1.25em;
   line-height: 1.5;
+  background-color: light-dark(white, black);
 }
 
 /* Header */
@@ -23,7 +24,7 @@ body {
   padding-block-end: 1rem;
   font-size: clamp(1rem, 8vw, 2.5rem);
   font-weight: 400;
-  color: #2f4f4f;
+  color: light-dark(black, white);
   text-align: center;
   border-bottom: thin solid lightgray;
 }
@@ -60,11 +61,11 @@ body {
 .item:focus-within {
   outline: 2px solid highlight;
   outline-offset: 2px;
-  background-color: light-dark(whitesmoke, DarkSlateGray);
+  background-color: light-dark(#f0f0f0, #323232);
 }
 
 .item:nth-child(2n) {
-  background-color: light-dark(whitesmoke, DarkSlateGray);
+  background-color: light-dark(#f0f0f0, #323232);
 }
 
 .item__headline {
@@ -78,6 +79,7 @@ body {
 .item__link {
   font-weight: 700;
   outline: none;
+  color: light-dark(blue, #98b4ff);
 }
 
 .item__timestamp {
