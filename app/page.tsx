@@ -47,21 +47,23 @@ export default async function Home() {
                 <span className={`badge ${article.slug}`}>
                   {article.source}
                 </span>
-                <h2 className="item__headline">
-                  <a
-                    className="item__link"
-                    href={article.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {article.title}
-                  </a>
+                <div className="item__body">
+                  <h2 className="item__headline">
+                    <a
+                      className="item__link"
+                      href={article.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {article.title}
+                    </a>
+                  </h2>
                   {article.date && (
                     <time className="item__timestamp" dateTime={article.date}>
                       ({formatDate(article.date)})
                     </time>
                   )}
-                </h2>
+                </div>
               </li>
             ))}
           </ul>

@@ -75,10 +75,14 @@ body {
   background-color: light-dark(#f0f0f0, #323232);
 }
 
-.item__headline {
-  margin: 0;
+/* Headline + timestamp, stacked in the row's second column. */
+.item__body {
   display: flex;
   flex-direction: column;
+}
+
+.item__headline {
+  margin: 0;
   font-size: 1em;
   text-wrap: balance;
 }
