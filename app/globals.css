@@ -29,9 +29,10 @@ body {
   border-bottom: thin solid lightgray;
 }
 
+/* Sized in em so it scales with the title; color follows the text. */
 .header__icon {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 0.7em;
+  height: 0.7em;
   margin-inline-end: 0.25em;
 }
 

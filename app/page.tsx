@@ -1,4 +1,5 @@
 import { getArticles } from "@/lib/rss";
+import { RssIcon } from "./rss-icon";
 
 const dateParts = new Intl.DateTimeFormat("en-GB", {
   day: "2-digit",
@@ -27,7 +28,7 @@ export default async function Home() {
     <>
       <header className="header">
         <h1 className="header__title">
-          <img className="header__icon" src="/icon.svg" alt="" />
+          <RssIcon className="header__icon" />
           Frétta sarpur&shy;inn
         </h1>
       </header>
