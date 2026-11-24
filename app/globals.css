@@ -158,6 +158,9 @@ body {
 .badge.mannlif {
   --badge-bg-color: #f0003c;
 }
+.badge.gimaldid {
+  --badge-bg-color: #f75426;
+}
 
 /* Errors */
 

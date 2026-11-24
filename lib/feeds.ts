@@ -20,4 +20,5 @@ export const feeds: Feed[] = [
   { name: "Grapevine", url: "https://grapevine.is/feed/", slug: "grapevine" },
   { name: "FÍB", url: "https://fibfrettir.is/feed/", slug: "fibfrettir" },
   { name: "Mannlíf", url: "https://mannlif.is/rss/", slug: "mannlif" },
+  { name: "Gímaldið", url: "https://gimaldid.is/feed/", slug: "gimaldid" },
 ];
